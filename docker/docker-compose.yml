@@ -1,0 +1,14 @@
+version: '2.3'
+
+services:
+
+  blender:
+    image: blender
+    container_name: blender
+    working_dir: /blender/src
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile3.0
+    volumes:
+      - ../:/blender
+    command: tail /dev/null -f
