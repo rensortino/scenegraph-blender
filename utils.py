@@ -41,7 +41,7 @@ def get_shape_function(shape):
 
 def set_camera():
     camera = D.objects['Camera']
-    camera.location = [5, 0, 0]
+    camera.location = [6, 0, 0]
     D.scenes["Scene"].render.resolution_percentage=100
     D.scenes["Scene"].render.resolution_x = 512
     D.scenes["Scene"].render.resolution_y = 512
