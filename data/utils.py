@@ -1,10 +1,9 @@
 import bpy
 import json
 
-with open('properties.json') as j:
-    props = json.load(j)
-    COLORS = props['colors']
-    BG_COLORS = props['bg-colors']
+def load_properties(filepath):
+    with open(filepath) as j:
+        return json.load(j)
 
 C = bpy.context
 D = bpy.data
@@ -46,9 +45,16 @@ def get_shape_function(shape):
     else:
         raise NotImplementedError
 
+def setup_scene():
+    set_camera()
+    set_rendering_options()
+    set_background()
+
 def set_camera():
     camera = D.objects['Camera']
     camera.location = [6, 0, 0]
+    
+def set_rendering_options():
     D.scenes["Scene"].render.resolution_percentage=100
     D.scenes["Scene"].render.resolution_x = 512
     D.scenes["Scene"].render.resolution_y = 512

@@ -7,10 +7,15 @@ Z_RANGE = 3.5
 
 C = bpy.context
 D = bpy.data
+
+props = load_properties('properties.json')
+COLORS = props['colors']
+BG_COLORS = props['bg-colors']
     
 def main():
     scene_graphs = []
     name = 'SG_Objects'
+    
     obj_collection = get_or_create_collection(name)
     for i in range(2):
         select_objects_in_collection(name)
