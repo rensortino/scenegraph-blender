@@ -11,6 +11,13 @@ D = bpy.data
 
 SCALE = [1.0, 1.0, 1.0]
 
+def setup_scene():
+    select_collection('SceneElements')
+    set_camera()
+    set_rendering_options()
+    set_background()
+    add_light()
+
 
 def rgb_to_rgba(rgb):
     rgba = [round(c / 255, 4) for c in rgb]
