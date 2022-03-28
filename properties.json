@@ -10,6 +10,10 @@
       "cyan": [41, 208, 208],
       "yellow": [255, 238, 51]
     },
+    "bg-colors": {
+      "light":[245, 245, 245],
+      "dark":[18,18,18]
+    },
     "materials": {},
     "sizes": {
       "large": 0.7,
